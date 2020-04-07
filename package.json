@@ -11,6 +11,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "docker:build:image": "docker build -t docker-create-react-app-image .",
+    "docker:run": "docker run -p 3000:3000 -it --volume $(pwd):/app --rm docker-create-react-app-image",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
